@@ -34,7 +34,7 @@
   --shadow: 0 18px 50px rgba(35, 32, 32, 0.12);
   --shadow-sm: 0 6px 22px rgba(35, 32, 32, 0.09);
   --shadow-lg: 0 30px 80px rgba(35, 32, 32, 0.18);
-  --maxw: 1200px;
+  --maxw: 1280px;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
@@ -399,7 +399,8 @@ ul { list-style: none; }
 .cta-band {
   position: relative; text-align: center; padding: 110px 0; color: #fff; overflow: hidden;
   background: linear-gradient(rgba(35, 32, 32, 0.82), rgba(35, 32, 32, 0.88)),
-    url("static/images/kitchen-cabinets/IMG_2395.jpeg") center/cover fixed no-repeat;
+    url("static/images/kitchen-cabinets/IMG_2395.jpeg") center/cover no-repeat;
+  background-attachment: scroll, fixed;
 }
 .cta-band h2 { font-size: clamp(2rem, 4.5vw, 3rem); color: #fff; margin-bottom: 16px; max-width: 880px; margin-inline: auto; }
 .cta-band p { color: rgba(255, 255, 255, 0.85); font-size: 1.1rem; margin-bottom: 30px; max-width: 620px; margin-inline: auto; }
@@ -421,6 +422,13 @@ ul { list-style: none; }
 .svc-detail:last-child { border-bottom: none; }
 .svc-detail.reverse .svcd-media { order: 2; }
 .svc-detail img { border-radius: var(--radius-lg); box-shadow: var(--shadow); width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+/* Branded placeholder tile for services that don't have a photo yet */
+.ph-tile { border-radius: var(--radius-lg); box-shadow: var(--shadow); width: 100%; aspect-ratio: 4/3;
+  background: linear-gradient(135deg, var(--charcoal) 0%, var(--taupe-dark) 100%);
+  display: grid; place-items: center; text-align: center; padding: 26px; }
+.ph-tile span { color: #fff; font-family: "Poppins", sans-serif; font-weight: 600; font-size: 1.15rem; line-height: 1.5; opacity: 0.95; }
+.ph-tile small { display: block; margin-top: 8px; font-weight: 400; font-size: 0.78rem; opacity: 0.6; letter-spacing: 0.04em; }
+.svc-media .ph-tile { border-radius: 0; box-shadow: none; aspect-ratio: 16/11; }
 .svc-detail h3 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin-bottom: 14px; }
 .svc-detail .svc-eyebrow { color: var(--taupe-dark); font-weight: 600; font-size: 0.8rem; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; }
 .svc-detail p { color: var(--muted); margin-bottom: 18px; }
@@ -499,27 +507,45 @@ ul { list-style: none; }
   .trust-grid { grid-template-columns: repeat(2, 1fr); }
   .trust-item:nth-child(2) { border-right: none; }
 }
+@media (max-width: 900px) {
+  /* Fixed backgrounds are janky / unsupported on most mobile browsers (esp. iOS) */
+  .cta-band { background-attachment: scroll, scroll; }
+}
 @media (max-width: 760px) {
+  /* Shorter header + smaller logo to reclaim vertical space on phones */
+  .nav-inner { height: 84px; }
+  .brand-logo { height: 60px; }
+  html { scroll-padding-top: 92px; }
+
   .nav-links {
-    position: fixed; top: 78px; right: 0; height: calc(100vh - 78px); width: 280px;
+    position: fixed; top: 84px; right: 0; height: calc(100vh - 84px); width: min(82vw, 300px);
     background: #fff; flex-direction: column; align-items: flex-start; gap: 4px;
-    padding: 34px 28px; box-shadow: -8px 0 30px rgba(0, 0, 0, 0.12);
+    padding: 28px 26px; box-shadow: -8px 0 30px rgba(0, 0, 0, 0.12);
     transform: translateX(110%); transition: transform 0.35s var(--ease); overflow-y: auto;
   }
   .nav-links.open { transform: translateX(0); }
   .nav-links a { width: 100%; padding: 12px 0; }
-  .nav-links .btn-nav { margin-top: 10px; }
+  .nav-links .btn-nav { margin-top: 10px; text-align: center; }
   .nav-toggle { display: flex; }
   .section { padding: 72px 0; }
-  .steps::after { display: none; }
-  .step::after { display: none; }
-  .split-badge { left: 50%; transform: translateX(-50%); bottom: -30px; }
+  .steps::after, .step::after { display: none; }
+
+  /* Badge: full-width-ish under the image so the label stops wrapping one word per line */
+  .split-media { margin-bottom: 56px; }
+  .split-badge { left: 50%; transform: translateX(-50%); bottom: -34px; max-width: none; width: min(92%, 340px); }
+  .split-badge .num { font-size: 2rem; }
+  .split-badge .lbl { font-size: 0.82rem; }
 }
 @media (max-width: 560px) {
   .svc-grid, .tmt-grid, .gallery, .steps, .check-list.two-col { grid-template-columns: 1fr; }
   .trust-grid { grid-template-columns: 1fr 1fr; }
+  .trust-item { padding: 30px 12px; }
+  .trust-item:nth-child(2n) { border-right: none; }
+  .trust-item:nth-child(-n+2) { border-bottom: 1px solid var(--line-dark); }
   .form-row { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; text-align: center; }
-  .hero { padding-top: 110px; }
+  .hero { padding-top: 96px; min-height: 88vh; }
+  .quote-form { padding: 26px 20px; }
+  .page-hero { padding: 120px 0 60px; }
 }

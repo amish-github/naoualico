@@ -1,3 +1,8 @@
+node_modules/
+_shots/
+_shots*.mjs
+package.json
+package-lock.json
 .DS_Store
 Thumbs.db
 desktop.ini
