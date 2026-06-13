@@ -1,5 +1,5 @@
 /* =====================================================================
-   NAOUALI & CO — site behavior
+   NAOUALI & CO, site behavior
    Shared across all pages. Each block guards for missing elements so the
    same file works on the homepage and every subpage.
    ===================================================================== */
@@ -154,7 +154,7 @@ document.querySelectorAll(".js-quote-form").forEach((form) => {
 
     if (form.action.includes("YOUR_FORM_ID")) {
       status.className = "form-status error";
-      status.textContent = "Form not connected yet — see README.md to add your Formspree ID.";
+      status.textContent = "Form not connected yet, see README.md to add your Formspree ID.";
       return;
     }
 

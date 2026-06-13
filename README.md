@@ -1,4 +1,4 @@
-# Naouali & Co — Website
+# Naouali & Co, Website
 
 A modern, multi-page website for Naouali & Co (Construction & Remodeling),
 modeled on the layout, sections and feel of texasgreatestremodelers.com but
@@ -24,12 +24,12 @@ naoualico/
 
 ## ▶️ See it on your computer
 
-Double-click **`index.html`** — it opens in your browser. Click around the nav
+Double-click **`index.html`**, it opens in your browser. Click around the nav
 to move between pages.
 
 ## 🎨 The design
 
-- **Fonts:** Poppins (headings) + Inter (body) — same Inter base the reference site uses.
+- **Fonts:** Poppins (headings) + Inter (body), same Inter base the reference site uses.
 - **Brand colors** live at the top of `styles.css` in the `:root { ... }` block
   (`--taupe`, `--charcoal`, `--sand`, etc.). Change them once and it updates everywhere.
 - **Logo size:** controlled by `.brand-logo { height: 90px }` in `styles.css`.
@@ -40,20 +40,20 @@ to move between pages.
 Open the files in any text editor and replace these placeholders (they appear on
 every page's contact section + footer):
 
-1. **Phone** — search for `(346) 529-0909` and `tel:+13465290909`, put your real number
+1. **Phone**, search for `(346) 529-0909` and `tel:+13465290909`, put your real number
    (digits only in the `tel:` link, e.g. `tel:+15551234567`).
-2. **Email** — currently `naoualico@gmail.com`. Change if you want a business email.
-3. **Service area / address** — search for `9801 Westheimer Rd, Houston, TX 77042`.
-4. **Map** — in `contact.html`, change `q=9801+Westheimer+Rd,+Houston,+TX+77042` in the Google Maps `iframe`
+2. **Email**, currently `naoualico@gmail.com`. Change if you want a business email.
+3. **Service area / address**, search for `9801 Westheimer Rd, Houston, TX 77042`.
+4. **Map**, in `contact.html`, change `q=9801+Westheimer+Rd,+Houston,+TX+77042` in the Google Maps `iframe`
    to your real address to move the pin.
-5. **Stats** — the "15+ years", "500+ projects" numbers in the trust bar.
-6. **Social links** — the Instagram/Facebook links in the footer (`href="#"`).
+5. **Stats**, the "15+ years", "500+ projects" numbers in the trust bar.
+6. **Social links**, the Instagram/Facebook links in the footer (`href="#"`).
 
 > ⚠️ **About the marketing claims.** This site uses "$0 Down", "0% interest for 24
 > months", "terms up to 180 months", "One Lifetime Warranty" and "pay when satisfied"
 > (copied from the reference site at your request). Make sure these accurately reflect
-> what your business actually offers before publishing — they're advertising claims.
-> The customer testimonials are realistic **samples** — replace them with your real
+> what your business actually offers before publishing, they're advertising claims.
+> The customer testimonials are realistic **samples**, replace them with your real
 > reviews when you have them.
 
 ## ✉️ Make the quote form email you (5 min, free)
