@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Naouali &amp; Co</title>
+  <meta name="description" content="A look at recent construction & remodeling projects by Naouali & Co — kitchen cabinets, commercial installations, sheetrock and more. Real projects, real results." />
+  <link rel="icon" type="image/png" href="static/logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Naouali and Co home"><img src="static/logo.png" alt="Naouali & Co logo" class="brand-logo" /></a>
+      <nav class="nav-links" id="navLinks">
+        <a href="services.html">Services</a>
+        <a href="portfolio.html" class="is-current">Portfolio</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn-nav">Get a Free Quote</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="crumbs"><a href="index.html">Home</a> &nbsp;/&nbsp; Portfolio</p>
+      <h1>Our Work</h1>
+      <p>A look at some of the projects we're proud of. Real spaces, real craftsmanship, real results.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="filters reveal">
+        <button class="filter-btn is-active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="kitchen">Kitchen Cabinets</button>
+        <button class="filter-btn" data-filter="commercial">Commercial</button>
+        <button class="filter-btn" data-filter="sheetrock">Sheetrock</button>
+      </div>
+
+      <div class="gallery reveal" id="gallery">
+        <figure class="gallery-item" data-cat="kitchen"><img loading="lazy" src="static/images/kitchen-cabinets/IMG_2375.jpeg" alt="Kitchen cabinet installation" /><figcaption>Kitchen Cabinets</figcaption></figure>
+        <figure class="gallery-item" data-cat="kitchen"><img loading="lazy" src="static/images/kitchen-cabinets/IMG_2376.jpeg" alt="Custom kitchen cabinetry" /><figcaption>Kitchen Cabinets</figcaption></figure>
+        <figure class="gallery-item" data-cat="kitchen"><img loading="lazy" src="static/images/kitchen-cabinets/IMG_2377.jpeg" alt="Modern kitchen cabinets" /><figcaption>Kitchen Cabinets</figcaption></figure>
+        <figure class="gallery-item" data-cat="kitchen"><img loading="lazy" src="static/images/kitchen-cabinets/IMG_2379.jpeg" alt="Kitchen remodel cabinetry" /><figcaption>Kitchen Cabinets</figcaption></figure>
+        <figure class="gallery-item" data-cat="kitchen"><img loading="lazy" src="static/images/kitchen-cabinets/IMG_2395.jpeg" alt="Finished kitchen cabinets" /><figcaption>Kitchen Cabinets</figcaption></figure>
+        <figure class="gallery-item" data-cat="kitchen"><img loading="lazy" src="static/images/kitchen-cabinets/IMG_2397.jpeg" alt="Kitchen cabinet detail" /><figcaption>Kitchen Cabinets</figcaption></figure>
+        <figure class="gallery-item" data-cat="kitchen"><img loading="lazy" src="static/images/kitchen-cabinets/IMG_2398.jpeg" alt="Completed kitchen project" /><figcaption>Kitchen Cabinets</figcaption></figure>
+        <figure class="gallery-item" data-cat="commercial"><img loading="lazy" src="static/images/commercial-insulation/IMG_7858.jpeg" alt="Commercial insulation install" /><figcaption>Commercial Installation</figcaption></figure>
+        <figure class="gallery-item" data-cat="commercial"><img loading="lazy" src="static/images/commercial-insulation/IMG_7859.jpeg" alt="Commercial build-out" /><figcaption>Commercial Installation</figcaption></figure>
+        <figure class="gallery-item" data-cat="commercial"><img loading="lazy" src="static/images/commercial-insulation/IMG_7860.jpeg" alt="Commercial project insulation" /><figcaption>Commercial Installation</figcaption></figure>
+        <figure class="gallery-item" data-cat="commercial"><img loading="lazy" src="static/images/commercial-insulation/IMG_7861.jpeg" alt="Commercial installation work" /><figcaption>Commercial Installation</figcaption></figure>
+        <figure class="gallery-item" data-cat="sheetrock"><img loading="lazy" src="static/images/sheet-rock-install/before.jpeg" alt="Sheetrock install — before" /><figcaption>Sheetrock — Before</figcaption></figure>
+        <figure class="gallery-item" data-cat="sheetrock"><img loading="lazy" src="static/images/sheet-rock-install/in-progress.jpeg" alt="Sheetrock install — in progress" /><figcaption>Sheetrock — In Progress</figcaption></figure>
+        <figure class="gallery-item" data-cat="sheetrock"><img loading="lazy" src="static/images/sheet-rock-install/after.jpeg" alt="Sheetrock install — after" /><figcaption>Sheetrock — After</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="cta-band">
+    <div class="container">
+      <h2 class="reveal">Like what you see? Let's build yours next.</h2>
+      <p class="reveal d1">Reach out for a free, no-obligation consultation and honest proposal.</p>
+      <div class="btn-row reveal d2">
+        <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+        <a href="services.html" class="btn btn-ghost">View Our Services</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <img src="static/logo.png" alt="Naouali & Co" class="footer-logo" />
+        <p class="footer-tag">Construction &amp; remodeling done with care — from the first sketch to the final detail.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="services.html#remodeling">Home Remodeling</a>
+        <a href="services.html#commercial">Commercial Construction</a>
+        <a href="services.html#cabinets">Kitchen Cabinets</a>
+        <a href="services.html#sheetrock">Sheetrock &amp; Drywall</a>
+        <a href="services.html#insulation">Insulation &amp; Framing</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="about.html">About Us</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html">Get a Free Quote</a>
+      </div>
+      <div class="footer-col">
+        <h4>Get in Touch</h4>
+        <a href="tel:+13465290909">(346) 529-0909</a>
+        <a href="mailto:naoualico@gmail.com">naoualico@gmail.com</a>
+        <p class="footer-tag" style="margin-top:14px">9801 Westheimer Rd,<br />Houston, TX 77042</p>
+
+        <p class="footer-note">Aymen Naouali — President</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span class="js-year"></span> Naouali &amp; Co. All rights reserved.</p>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
